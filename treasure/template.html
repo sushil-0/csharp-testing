@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Redirect</title>
+</head>
+<body OnLoad="OnLoadEvent();" >
+    <form target="_top" name="form1" action='REDIRECT_LINK' method="post">
+        <input type="hidden" name="data" value='PAYLOAD' id="data">
+    </form>
+    <script language="JavaScript">
+        function OnLoadEvent() {
+            document.form1.submit();
+        }
+    </script>
+</body>
+</html>

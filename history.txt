@@ -1,0 +1,20 @@
+{
+   "customerID" : "CUS1234",
+   "merchantID" : "test",
+   "showAllCards" : true
+}
+URL: https://dev-api.celerispay.com/partnerAPI
+payLoad: {"lang":"hi","apiKey":"test","payLoad":"0b33d3d0a9775eb22cd5989a21c779c2c9202eb0d98ef9249fb23ba1a3dacd03574b9c82048dcf3c9714febc9e339e480b6104a10b386bbd03e6ca78c8ac740728803ea2792f90519ffbcdda6d5dc3ff5e653ffe323244ab35473df0ded8e2e1"}
+Header: System.Collections.Generic.Dictionary`2[System.String,System.Object]
+{
+   "tokens" : [
+      {
+         "cardHolderName" : "Grault",
+         "expiryDate" : "2030_10",
+         "id" : "46663004-147085487630303433-0282",
+         "issuer" : "VisaCard",
+         "maskedToken" : "46663004-XXXXXX-0282"
+      }
+   ],
+   "total" : 1
+}

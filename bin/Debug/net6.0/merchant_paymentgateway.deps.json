@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "merchant_paymentgateway/1.0.0": {
+        "dependencies": {
+          "GatewayCSharp": "1.0.0"
+        },
+        "runtime": {
+          "merchant_paymentgateway.dll": {}
+        }
+      },
+      "GatewayCSharp/1.0.0": {
+        "runtime": {
+          "GatewayCSharp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "merchant_paymentgateway/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GatewayCSharp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

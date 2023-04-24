@@ -1,0 +1,78 @@
+Attempting to cancel the build...
+
+
+
+
+
+
+Subscription.createPlan() executing...
+{"name":"Video Streaming Service Plan","code":"AAA","installments":[{"period":"WEEK","frequency":"2","totalInstallments":"1","type":"1","sequence":"1","amount":"19.99","currencyCode":"USD"}]}
+URL: https://dev-api.celerispay.com/test/plans
+payLoad: {"lang":"hi","apiKey":"test","payLoad":"85eb0a0339c263e563535f7f0ebee0871e0568f2f72a5b015e0e3628fcc9d887fdf27eefdf94c87ce53a2d7faf9e2c499f9e1652a7d5cc27e7f28d8e6ff5d1c87ec0a7c0ffbb0eec6f25b9080c807f899ba697b6f97af45b07c62c9df5c239d6482ecad7baae9d538aa24dfa7eff24c8a3d12370db201b23d92bd4eb25b0c60119189192b2c23e5936e9936f43826f31a90f3414591f9692706929263776bc0db510c91faa23bf7d076f1d2e1594fdfdd75c74b950627920db6bda38a3bac6fb6f4c4b4c5724921b9f9ee2d46b3fdf17"}
+Header: System.Collections.Generic.Dictionary`2[System.String,System.Object]
+{"responseCode":400,"description":"{"response":{"description":"Duplicate Subscription Plan","responseCode":321}}"}
+
+Subscription.getSubscriptionPlanDetails() executing...
+""
+URL: https://dev-api.celerispay.com/test/plans/AAA
+payLoad: {"lang":"hi","apiKey":"test","payLoad":"d9cad9b5acda537c1d7f0507d4940637002f97b04db3f492985cd7937e34c5b9"}
+Header: System.Collections.Generic.Dictionary`2[System.String,System.Object]
+{"responseCode":404,"description":"Invalid planId"}
+
+Subscription.createPlan() executing...
+{"name":"Video Streaming Service Plan","code":"BBB","installments":[{"period":"WEEK","frequency":"2","totalInstallments":"1","type":"1","sequence":"1","amount":"19.99","currencyCode":"USD"}]}
+URL: https://dev-api.celerispay.com/test/plans
+payLoad: {"lang":"hi","apiKey":"test","payLoad":"0d00632e8484bbff23b7595aa87c0d6ab29be0018da90494673822aa8b71ec49d86efde6f037189b6e220ba80f8ac019ce23306e3987b664fbb0e852634dd3135fa6e11545d2b5e6b811b1f259761f8e32dc4992a326c5cd3ba181b6c52d41592322ecd2ffd93c4d5cf5ecd196f7a8784984d1a585d4131dc3b3342773d61a686132c10c464668bd806aebf4d4f8a76d62b38e3f33e1429a8ac01970719b36293cff9cd65806ee4aa2e682581c0f0b520597c7e25e7732da62640989e9e1105093a791156db1aeac93a895548310c953"}
+Header: System.Collections.Generic.Dictionary`2[System.String,System.Object]
+{"installments":[{"totalInstallments":1,"sequence":1,"amount":"19.99","period":"WEEK","type":"1","currencyCode":"USD","frequency":2}],"name":"Video Streaming Service Plan","planId":"d76a2faa-2a04-4774-a33f-c7e4e6f856a5","paymentFailureThreshold":0,"creationDate":"Apr 20, 2023 2:28:32 PM","carryForwardAmount":0,"planCode":"BBB","linkExpireIn":7,"requestStatus":"Successful","expirationDate":"Apr 20, 2024 2:28:32 PM","status":"ACTIVE","statusCode":200}
+
+Subscription.getSubscriptionPlanDetails() executing...
+""
+URL: https://dev-api.celerispay.com/test/plans/BBB
+payLoad: {"lang":"hi","apiKey":"test","payLoad":"ea8b90ae63c050f28b61a93962fae491f27d13feeb9ebe5e1461380d9109be57"}
+Header: System.Collections.Generic.Dictionary`2[System.String,System.Object]
+{"responseCode":404,"description":"Invalid planId"}
+
+Subscription.getSubscriptionPlanDetails() executing...
+""
+URL: https://dev-api.celerispay.com/test/plans/d76a2faa-2a04-4774-a33f-c7e4e6f856a5
+payLoad: {"lang":"hi","apiKey":"test","payLoad":"3de74e01353d50d19ddb48762e9acdfe4e78708d7368545daa8819f29a83c0c7"}
+Header: System.Collections.Generic.Dictionary`2[System.String,System.Object]
+{"plans":[{"installments":[{"totalInstallments":1,"sequence":1,"amount":"19.99","period":"WEEK","type":"1","currencyCode":"USD","frequency":2}],"merchantId":"test","name":"Video Streaming Service Plan","planId":"d76a2faa-2a04-4774-a33f-c7e4e6f856a5","paymentFailureThreshold":0,"creationDate":"Apr 20, 2023 2:28:32 PM","carryForwardAmount":0,"planCode":"BBB","linkExpireIn":7,"expirationDate":"Apr 20, 2024 2:28:32 PM","status":"ACTIVE"}],"requestStatus":"Successful","statusCode":200}
+
+Subscription.updateSubscriptionPlan() executing...
+{"name":"Video Streaming Service Plan","code":"BBB","installments":[{"period":"WEEK","frequency":"2","totalInstallments":"1","type":"1","sequence":"2","amount":"19.99","currencyCode":"USD"},{"period":"MONTH","frequency":"4","totalInstallments":"2","type":"REGULAR","amount":"44.99","currencyCode":"USD"}]}
+URL: https://dev-api.celerispay.com/test/plans/d76a2faa-2a04-4774-a33f-c7e4e6f856a5
+payLoad: {"lang":"hi","apiKey":"test","payLoad":"66d83f281a202fb839f5fa33bcdaca7504c48e4faa42a11d6ad760905966cae1df9a767629a17e3056a368b88a7463e0343436e5644b670024a2d3661a97eae68ce1e17af3bf1dfd33b1477bfb534dd0970b41bd63b262e90a61e8dc1a1e5a92eb0ffd7f50da01f51aa4396c4942c577c5dc3b8dcf8298f76b008a5a21a377f58f944802258016aa6f7b378f2549ce632740839f09d869d7edf6b908b36681a0119090237342208a789cef6976499f461cce33b0f43ebfd111d6045220fb844d31c5d5ad4caf30e31a35154af8df466d3b53427f92e1d02a3df24b3a4fae026dde29b437626312979fe5520d8530869509ffc69ce278ad768078c6a92f431fc22114a95d7c5c52c58a9200054daa92a02f16d1477c4ecdcb9ae9e78db6005f7a7a8862407d3265d3261dabecfe74edb4e2788ec679b349f7245f2b9f374c24a4d9cefb3c3b7db8b49c434b66650e0a71"}
+Header: System.Collections.Generic.Dictionary`2[System.String,System.Object]
+{"installments":[{"totalInstallments":1,"sequence":1,"amount":"19.99","period":"WEEK","type":"1","currencyCode":"USD","frequency":2},{"totalInstallments":1,"sequence":2,"amount":"19.99","period":"WEEK","type":"1","currencyCode":"USD","frequency":2}],"name":"Video Streaming Service Plan","planId":"d76a2faa-2a04-4774-a33f-c7e4e6f856a5","paymentFailureThreshold":0,"creationDate":"Apr 20, 2023 2:28:32 PM","carryForwardAmount":0,"planCode":"BBB","linkExpireIn":7,"requestStatus":"Successful","expirationDate":"Apr 20, 2024 2:28:32 PM","status":"ACTIVE","statusCode":200}
+
+Subscription.deactivateSubscriptionPlan() executing...
+""
+URL: https://dev-api.celerispay.com/test/plans/AAA
+payLoad: {"lang":"hi","apiKey":"test","payLoad":"927f494796802049de30a07d67a2fe715d8d4ec4deef138b82419f0aba77db41"}
+Header: System.Collections.Generic.Dictionary`2[System.String,System.Object]
+{"responseCode":404,"description":"Invalid planId"}
+
+Subscription.getSubscriptionPlanDetails() executing...
+""
+URL: https://dev-api.celerispay.com/test/plans/d76a2faa-2a04-4774-a33f-c7e4e6f856a5
+payLoad: {"lang":"hi","apiKey":"test","payLoad":"0eeb3ce117b0c07cd58c818055a406949d1cbc6bf9b22797e7c30f0f81aca562"}
+Header: System.Collections.Generic.Dictionary`2[System.String,System.Object]
+{"plans":[{"installments":[{"totalInstallments":1,"sequence":1,"amount":"19.99","period":"WEEK","type":"1","currencyCode":"USD","frequency":2},{"totalInstallments":1,"sequence":2,"amount":"19.99","period":"WEEK","type":"1","currencyCode":"USD","frequency":2}],"merchantId":"test","name":"Video Streaming Service Plan","planId":"d76a2faa-2a04-4774-a33f-c7e4e6f856a5","paymentFailureThreshold":0,"creationDate":"Apr 20, 2023 2:28:32 PM","carryForwardAmount":0,"planCode":"BBB","linkExpireIn":7,"expirationDate":"Apr 20, 2024 2:28:32 PM","status":"ACTIVE"}],"requestStatus":"Successful","statusCode":200}
+
+Subscription.deactivateSubscriptionPlan() executing...
+""
+URL: https://dev-api.celerispay.com/test/plans/d76a2faa-2a04-4774-a33f-c7e4e6f856a5
+payLoad: {"lang":"hi","apiKey":"test","payLoad":"5e84a9504a6a4ac3093cbf8fa31ff59f445fadbfc3f1a8a8efb3b357d8d50f06"}
+Header: System.Collections.Generic.Dictionary`2[System.String,System.Object]
+{"response":{"description":"Transaction Successful","responseCode":200}}
+
+[1;32mOptions: WithoutHostedPaymentPage.cards[0m
+WithoutHostedPaymentPage.cards() executing...
+[1;35mCommonUtils.ToJSON: {"lang":"en","merchant":{"merchantID":"test","customerID":"CUS1234"},"transaction":{"txnAmount":"19.99","currencyCode":"EUR","txnReference":"a82c7054-2f94-44de-8c09-214523a51c41","paymentMode":"CreditCard","paymentDetail":{"cardNumber":"4666300411032500282","expYear":"2030","expMonth":"10","nameOnCard":"Grault","cvv":"123"}},"customer":{"billingAddress":{"firstName":"Foo","lastName":"Bar","emailId":"foo@baz.com","mobileNo":"31-232567456"},"shippingDetails":{"sFirstName":"Foo","sLastName":"Bar","sEmailId":"foo@baz.com","sMobileNo":"31-232567456"}},"url":{"successURL":"https://pay.newgenpayments.com/client/html/Success.html","failURL":"https://pay.newgenpayments.com/client/html/Fail.html","cancelURL":"https://pay.newgenpayments.com/client/html/Cancel.htm"},"dynamicDescriptor":{"name":"qux","email":"qux@corge.com","mobile":"1234567890"}}[0m
+df6f26a8e2a619c9d69e07c18e24e89c0a11565b10dcd8a36ed3efad74c4d9c9ef405dc00e96292c79e812fbfbe76ea196dfe5b33baa2c5b7faf5cf2bbe2f4b6a86dded12ba3514282d5580f148e711bca9cc657d20426662ea46a7644fee4c35c632d4db8afb65cb0f8939286b2f451f384b6cacd941d70e579787db718a687f41b1cf6be4dcfa5135f70d8a6a8febb24e26d2e9700b51ae344ce68898a9c8c5f9422c4acaabc822f14aedfcd4e2cef1ae9b1e4fde95b779e37758d78db97cb37db250f8d7e54c467a81edcc763a5a2aedc353a8b143afd4b3ef348d7673621083f55f1ed3f461fbc179ec693fffaa144be7edb8d72870f5ca9e1e943fbf2e978ceb5f28122e8f5f35eca00411c64a137f4786a50bfcec1b982f680fe6e2394ba977f8ca82c8e81f457f718ce4f757306dc1833ee6ce0f6254a64f26d9b3422e4690a12a82370532f82a0be1784164ced29cf01c99cff9a3ed4081450bfcb0f47f3f75e267c62ebed30a4146433f3bf12aa5598ef2388c387d959a765085a1816d7fa2498524c430f5893c9389ad07ae7c6e050b1511fa74632711c28e93fce3e8f255f1a52922967fcaa23d9bbc39c7b348bdaa3a893f2aa11d15bf171f059706a9d447f7780dccce2a565a6d6f4fb6e4d237dfee0f7e05aaa07a13f0c9bec11050f121fb32e13b18bdaf2003da4c779043aaf97ff21615c5529803d4a75c9ee7a31be179a2f17583afe1b5213971ab6b903aa66e587bf33073cb28cdb26b3c060c72145bfb4f09018883ebf065434d13ca589c4569447927b99c3b65c83683a6d40647e03965a57c897bd358c49e0d188bab69dd5fbd7db34ba454deacbaec52628ac22c7a9e847f3466d1bef3410915021fc215869c2e2c63c02dd1c9af9e97b006f2b6f79b32260ba849f8b4336d7473094c2edd07b359b2e4646726f7217a2cd505f6fa69b4dccdeaa66690a9946c2a9833c71f8d16927a2581f14d30a239045da7132f3fef637f7c37222be9583934cdf3d60c0d0ef711c54bea4b9d5fd415ba104574cdd24624933cac954255d8a905ae80c0d6522da7b1286e0bb213ac521f59fb56ba0a5a8f6bf5467d6cb463246c1e012c1db64f669763153d7a188464809d8e941c7dbf9f119dfbcdfaaed76f73e16932d8f6f17e266ec216bdb036ff84411fc6749e13a89b3a2bdbd7f8f5f8d47d0318834f70b64afed2cc325
+[1;33mCommonUtils.ToJSON: {"lang":"en","apiKey":"test","payLoad":"df6f26a8e2a619c9d69e07c18e24e89c0a11565b10dcd8a36ed3efad74c4d9c9ef405dc00e96292c79e812fbfbe76ea196dfe5b33baa2c5b7faf5cf2bbe2f4b6a86dded12ba3514282d5580f148e711bca9cc657d20426662ea46a7644fee4c35c632d4db8afb65cb0f8939286b2f451f384b6cacd941d70e579787db718a687f41b1cf6be4dcfa5135f70d8a6a8febb24e26d2e9700b51ae344ce68898a9c8c5f9422c4acaabc822f14aedfcd4e2cef1ae9b1e4fde95b779e37758d78db97cb37db250f8d7e54c467a81edcc763a5a2aedc353a8b143afd4b3ef348d7673621083f55f1ed3f461fbc179ec693fffaa144be7edb8d72870f5ca9e1e943fbf2e978ceb5f28122e8f5f35eca00411c64a137f4786a50bfcec1b982f680fe6e2394ba977f8ca82c8e81f457f718ce4f757306dc1833ee6ce0f6254a64f26d9b3422e4690a12a82370532f82a0be1784164ced29cf01c99cff9a3ed4081450bfcb0f47f3f75e267c62ebed30a4146433f3bf12aa5598ef2388c387d959a765085a1816d7fa2498524c430f5893c9389ad07ae7c6e050b1511fa74632711c28e93fce3e8f255f1a52922967fcaa23d9bbc39c7b348bdaa3a893f2aa11d15bf171f059706a9d447f7780dccce2a565a6d6f4fb6e4d237dfee0f7e05aaa07a13f0c9bec11050f121fb32e13b18bdaf2003da4c779043aaf97ff21615c5529803d4a75c9ee7a31be179a2f17583afe1b5213971ab6b903aa66e587bf33073cb28cdb26b3c060c72145bfb4f09018883ebf065434d13ca589c4569447927b99c3b65c83683a6d40647e03965a57c897bd358c49e0d188bab69dd5fbd7db34ba454deacbaec52628ac22c7a9e847f3466d1bef3410915021fc215869c2e2c63c02dd1c9af9e97b006f2b6f79b32260ba849f8b4336d7473094c2edd07b359b2e4646726f7217a2cd505f6fa69b4dccdeaa66690a9946c2a9833c71f8d16927a2581f14d30a239045da7132f3fef637f7c37222be9583934cdf3d60c0d0ef711c54bea4b9d5fd415ba104574cdd24624933cac954255d8a905ae80c0d6522da7b1286e0bb213ac521f59fb56ba0a5a8f6bf5467d6cb463246c1e012c1db64f669763153d7a188464809d8e941c7dbf9f119dfbcdfaaed76f73e16932d8f6f17e266ec216bdb036ff84411fc6749e13a89b3a2bdbd7f8f5f8d47d0318834f70b64afed2cc325"}[0m
+[1;35mpayLoad: {"lang":"en","apiKey":"test","payLoad":"df6f26a8e2a619c9d69e07c18e24e89c0a11565b10dcd8a36ed3efad74c4d9c9ef405dc00e96292c79e812fbfbe76ea196dfe5b33baa2c5b7faf5cf2bbe2f4b6a86dded12ba3514282d5580f148e711bca9cc657d20426662ea46a7644fee4c35c632d4db8afb65cb0f8939286b2f451f384b6cacd941d70e579787db718a687f41b1cf6be4dcfa5135f70d8a6a8febb24e26d2e9700b51ae344ce68898a9c8c5f9422c4acaabc822f14aedfcd4e2cef1ae9b1e4fde95b779e37758d78db97cb37db250f8d7e54c467a81edcc763a5a2aedc353a8b143afd4b3ef348d7673621083f55f1ed3f461fbc179ec693fffaa144be7edb8d72870f5ca9e1e943fbf2e978ceb5f28122e8f5f35eca00411c64a137f4786a50bfcec1b982f680fe6e2394ba977f8ca82c8e81f457f718ce4f757306dc1833ee6ce0f6254a64f26d9b3422e4690a12a82370532f82a0be1784164ced29cf01c99cff9a3ed4081450bfcb0f47f3f75e267c62ebed30a4146433f3bf12aa5598ef2388c387d959a765085a1816d7fa2498524c430f5893c9389ad07ae7c6e050b1511fa74632711c28e93fce3e8f255f1a52922967fcaa23d9bbc39c7b348bdaa3a893f2aa11d15bf171f059706a9d447f7780dccce2a565a6d6f4fb6e4d237dfee0f7e05aaa07a13f0c9bec11050f121fb32e13b18bdaf2003da4c779043aaf97ff21615c5529803d4a75c9ee7a31be179a2f17583afe1b5213971ab6b903aa66e587bf33073cb28cdb26b3c060c72145bfb4f09018883ebf065434d13ca589c4569447927b99c3b65c83683a6d40647e03965a57c897bd358c49e0d188bab69dd5fbd7db34ba454deacbaec52628ac22c7a9e847f3466d1bef3410915021fc215869c2e2c63c02dd1c9af9e97b006f2b6f79b32260ba849f8b4336d7473094c2edd07b359b2e4646726f7217a2cd505f6fa69b4dccdeaa66690a9946c2a9833c71f8d16927a2581f14d30a239045da7132f3fef637f7c37222be9583934cdf3d60c0d0ef711c54bea4b9d5fd415ba104574cdd24624933cac954255d8a905ae80c0d6522da7b1286e0bb213ac521f59fb56ba0a5a8f6bf5467d6cb463246c1e012c1db64f669763153d7a188464809d8e941c7dbf9f119dfbcdfaaed76f73e16932d8f6f17e266ec216bdb036ff84411fc6749e13a89b3a2bdbd7f8f5f8d47d0318834f70b64afed2cc325"}[0m
+
+
