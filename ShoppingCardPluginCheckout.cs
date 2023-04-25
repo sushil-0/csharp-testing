@@ -16,7 +16,6 @@ public class ShoppingCardPluginCheckout {
         Console.WriteLine(response["payLoad"]);
     }
 
-    // PROBLEM: Ideal needs to be implemented on dev
     public static void ideal() {
         Console.WriteLine("ShoppingCardPluginCheckout.ideal() executing...");
         Dictionary<string, string> response = PaymentFactory.GetInstance(ValueConstant.CERTIFICATE_PATH, DetailsConstant.MERCHANT_DETAILS, ValueConstant.ACCESS_TOKEN)

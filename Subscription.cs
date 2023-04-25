@@ -36,7 +36,6 @@ public class Subscription {
         Console.WriteLine(response);
     }
 
-    // PROBLEM: Getting resopnse "Transaction Successful" rather than "Plan deactivated"
     public static void deactivateSubscriptionPlan() {
         Console.WriteLine("Subscription.deactivateSubscriptionPlan() executing...");
         string response = SubscriptionFactory.GetInstance(ValueConstant.CERTIFICATE_PATH, DetailsConstant.MERCHANT_DETAILS, ValueConstant.ACCESS_TOKEN)

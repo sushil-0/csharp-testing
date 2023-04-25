@@ -1,21 +1,21 @@
 using GatewayCSharp.Properties.Payment;
 using GatewayCSharp.Properties.Constants;
 
-public class WithoutHostedPaymentPage {
+public class WithoutHostedPaymentPage
+{
     // PROBLEM: 3DS and fingerprint implementation needs to be implemented
     public static void cards()
     {
         Console.WriteLine("WithoutHostedPaymentPage.cards() executing...");
 
         TransactionDetails transactionDetails = DetailsConstant.TRANSACTION_DETAILS;
-        transactionDetails.async=false;
+        transactionDetails.async = false;
         Dictionary<string, string> response = PaymentFactory.GetInstance(ValueConstant.CERTIFICATE_PATH, DetailsConstant.MERCHANT_DETAILS, ValueConstant.ACCESS_TOKEN)
                                     .SetStaging(true)
                                     .SetDynamicDescriptor(DetailsConstant.DYNAMIC_DESCRIPTOR)
                                     .SetTransactionDetails(transactionDetails)
                                     .SetURLDetails(DetailsConstant.URL_DETAILS)
                                     .SetAddressDetails(DetailsConstant.ADDRESS_DETAILS)
-                                    .SetFingerprintDetails(DetailsConstant.FINGERPRINT_DETAILS)
                                     .SetCardDetails(DetailsConstant.CARD_DETAILS)
                                     .SetPaymentMode(Modes.CREDIT_CARD)
                                     .BuildPayment();
@@ -23,7 +23,6 @@ public class WithoutHostedPaymentPage {
         Console.WriteLine(response["payLoad"]);
     }
 
-    // PROBLEM: Ideal needs to be implemented on dev
     public static void ideal()
     {
         Console.WriteLine("WithoutHostedPaymentPage.ideal() executing...");
